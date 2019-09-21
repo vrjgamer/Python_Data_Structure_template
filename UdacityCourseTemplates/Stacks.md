@@ -1,3 +1,4 @@
+```python
 class Element(object):
     def __init__(self, value):
         self.value = value
@@ -38,3 +39,5 @@ class Stack(object):
 
     def pop(self):
         return self.ll.delete_first()
+
+```
