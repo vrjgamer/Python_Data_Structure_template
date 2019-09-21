@@ -16,14 +16,14 @@ def quicksort(array, lower, upper):
 
 def partition(array, lower, upper):
     pivot = array[upper]
-    i = j = lower 
-    while j <= upper:
-        if array[j] < pivot:
-            swap(array, i, j)
-            i += 1
-        j += 1
-    swap(array, i, upper)
-    return i
+    entryIndex = currentIndex = lower 
+    while currentIndex <= upper:
+        if array[currentIndex] < pivot:
+            swap(array, entryIndex, currentIndex)
+            entryIndex += 1
+        currentIndex += 1
+    swap(array, entryIndex, upper)
+    return entryIndex
 def swap(array, A, B):
     temp = array[A]
     array[A] = array[B]
