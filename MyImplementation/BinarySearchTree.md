@@ -98,5 +98,15 @@ Verify if the entire tree follows the BST property, so check<br/>
     
 # to call method use isBST(root, sys.maxint, (-sys.maxint - 1)) # pass max and min integer values
 ```
+### Searching
+```python
+    def search(self, start, find_val): #output if found Node is returned else None
+        if start == None or start.value == find_val:
+            return start
 
+        if find_val < start.value:
+            return self.search(start.left, find_val)
+
+        return self.search(start.right, find_val)
+```
 
